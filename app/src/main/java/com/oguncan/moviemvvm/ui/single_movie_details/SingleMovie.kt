@@ -34,7 +34,7 @@ class SingleMovie : AppCompatActivity() {
         })
         viewModel.networkState.observe(this, Observer {
             progressBar.visibility = if(it == NetworkState.LOADING) View.VISIBLE else View.GONE
-            txtError.visibility = if(it == NetworkState.LOADING) View.VISIBLE else View.GONE
+            txtError.visibility = if(it == NetworkState.ERROR) View.VISIBLE else View.GONE
         })
     }
 
